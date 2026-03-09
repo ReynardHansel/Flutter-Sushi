@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
   final String text;
-  const MyButton({super.key, required this.text});
+  final void Function()? onTap;
+  const MyButton({super.key, required this.text, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return FilledButton(
-      onPressed: () {print("$text clicked");},
+      onPressed: onTap,
       style: FilledButton.styleFrom(
         backgroundColor: Color.fromARGB(109, 140, 94, 91),
         padding: EdgeInsets.all(20),

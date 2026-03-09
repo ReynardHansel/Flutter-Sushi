@@ -58,7 +58,9 @@ class IntroPage extends StatelessWidget {
               // Spacer(),
 
               // Get started button
-              MyButton(text: "Get Started"),
+              MyButton(text: "Get Started", onTap: (){
+                print("Get started broo");
+              },),
             ],
           ),
         ),
