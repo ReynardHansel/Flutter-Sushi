@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sushi/theme/colors.dart';
 
 class MyButton extends StatelessWidget {
   final String text;
@@ -10,7 +11,7 @@ class MyButton extends StatelessWidget {
     return FilledButton(
       onPressed: onTap,
       style: FilledButton.styleFrom(
-        backgroundColor: Color.fromARGB(109, 140, 94, 91),
+        backgroundColor: AppColors.buttonBackground,
         padding: EdgeInsets.all(20),
       ),
       child: Row(

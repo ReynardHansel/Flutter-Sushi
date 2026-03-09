@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sushi/components/button.dart';
+import 'package:sushi/theme/colors.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -8,7 +9,7 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 138, 60, 55),
+      backgroundColor: AppColors.primary,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(25.0),
@@ -23,7 +24,7 @@ class IntroPage extends StatelessWidget {
                 "SUSHI MAN",
                 style: GoogleFonts.dmSerifDisplay(
                   fontSize: 36,
-                  color: Colors.white,
+                  color: AppColors.onPrimary,
                 ),
               ),
 
@@ -42,7 +43,7 @@ class IntroPage extends StatelessWidget {
                 "THE TASTE OF JAPANESE FOOD",
                 style: GoogleFonts.dmSerifDisplay(
                   fontSize: 44,
-                  color: Colors.white,
+                  color: AppColors.onPrimary,
                 ),
               ),
 
@@ -51,16 +52,20 @@ class IntroPage extends StatelessWidget {
               // Subtitle
               Text(
                 "Feel the taste of the most popular Japanese food from anywhere and anytime",
-                style: TextStyle(color: Colors.grey[300], height: 2),
+                style: TextStyle(color: AppColors.subtitle, height: 2),
               ),
 
               const SizedBox(height: 25),
               // Spacer(),
 
               // Get started button
-              MyButton(text: "Get Started", onTap: (){
-                print("Get started broo");
-              },),
+              MyButton(
+                text: "Get Started",
+                onTap: () {
+                  print("Get started clicked");
+                  Navigator.pushNamed(context, '/menupage');
+                },
+              ),
             ],
           ),
         ),
