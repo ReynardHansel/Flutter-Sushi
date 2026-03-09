@@ -59,7 +59,26 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
 
+          const SizedBox(height: 25),
+
           // Search bar
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: TextField(
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 25),
 
           // Menu list
 
